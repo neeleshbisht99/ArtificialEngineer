@@ -87,8 +87,37 @@ class Task:
         }
     
     def set_state(self, state):
-        pass
+        """Sets the state of the task and its subtasks.
+        Args:
+            state: The new state of the task.
 
+        Raises: 
+            PlanInvalidStateError: If the provided state is invalid.
+        """
+        if state not in STATES:
+            logger.error('Invalid state: %s', state)
+            raise PlanInvalidStateError(state)
+        self.state = state
+        if state == COMPLETED_STATE or state == ABANDONED_STATE or state == VERIFIED_STATE:
+            for subtask in self.subtasks:
+                if subtask.state != ABANDONED_STATE:
+                    subtask.state(state)
+        elif state == IN_PROGRESS_STATE:
+            if self.parent is not None:
+                self.parent.set_state(state)
+
+    def get_current_task(self) -> 'Task | None':
+        """Retrieves the current task in progress.
+
+        Returns:
+            The current task in progress, or None if no task is in progress.
+        """
+        for subtask in self.subtasks:
+            if subtask.state == IN_PROGRESS_STATE:
+                return subtask.get_current_task()
+        if self.state == IN_PROGRESS_STATE:
+            return self
+        return None
 
 
 class Plan:
