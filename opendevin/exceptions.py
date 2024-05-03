@@ -1,3 +1,24 @@
+class MaxCharExceedError(Exception):
+    def __init__(self, num_of_chars=None, max_char_limit=None):
+        if num_of_chars is not None and max_char_limit is not None:
+            message = f'Number of characters {num_of_chars} exceeds MAX_CHARS limit: {max_char_limit}'
+        else:
+            message = 'Number of characters exceeds MAX_CHARS limit'
+        super().__init__(message)
+        
+class AgentNoActionError(Exception):
+    def __init__(self, message='Agent must return an action'):
+        super.__init__(message)
+
+
+class AgentNoInstructionError(Exception):
+    def __init__(self, message='Instruction must be provided'):
+        super.__init__(message)
+
+
+class AgentEventTypeError(Exception):
+    def __init__(self, message='Event must be a dictionary'):
+        super.__init__(message)
 
 class AgentAlreadyRegisteredError(Exception):
     def __init__(self, name=None):
@@ -15,3 +36,23 @@ class AgentNotRegisteredError(Exception):
         else:
             message = "No agent class registered"
         super().__init__(message)
+
+class LLMOutputError(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+
+class SandboxInvalidBackgroundCommandError(Exception):
+    def __init__(self, id=None):
+        if id is not None:
+            message = f'Invalid background command id {id}'
+        else:
+            message = 'Invalid background command id'
+        super.__init__(message)
+
+class PlanInvalidStateError(Exception):
+    def __init__(self, state=None):
+        if state is not None:
+            message = f'Invalid state {state}'
+        else:
+            message = 'Invalid state'
+        super.__init__(message)
