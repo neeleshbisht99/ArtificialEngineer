@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Tuple
 
-from opendevin.plan import Plan
+from artificialEngineer.plan import Plan
 
-from opendevin.action import (
+from artificialEngineer.action import (
     Action,
 )
-from opendevin.observation import (
+from artificialEngineer.observation import (
     Observation,
     CmdOutputObservation,
 )

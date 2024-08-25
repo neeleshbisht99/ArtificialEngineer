@@ -2,7 +2,7 @@ import select
 import sys
 from typing import Tuple
 
-from opendevin.sandbox.process import Process
+from artificialEngineer.sandbox.process import Process
 
 
 class DockerProcess(Process):
@@ -40,8 +40,8 @@ class DockerProcess(Process):
             When you execute a command using `exec` in a docker container, the output produced will be in bytes. this function parses the ouput of a Docker exec command.
         Example:
             Considering you have a docker container named `my_container` up and running
-            $ docker exec my_container echo "Hello OpenDevin!"
-            >> b'\x00\x00\x00\x00\x00\x00\x00\x13Hello OpenDevin!'
+            $ docker exec my_container echo "Hello artificialEngineer!"
+            >> b'\x00\x00\x00\x00\x00\x00\x00\x13Hello artificialEngineer!'
 
             Such binary logs will be processed by this function.
 
@@ -49,11 +49,11 @@ class DockerProcess(Process):
 
             The function also returns a tail of bytes to ensure that no information is lost. It is a way to handle edge cases and maintain data integrity.
 
-            >> output_bytes = b'\x00\x00\x00\x00\x00\x00\x00\x13Hello OpenDevin!'
+            >> output_bytes = b'\x00\x00\x00\x00\x00\x00\x00\x13Hello artificialEngineer!'
             >> parsed_output, remaining_bytes = parse_docker_exec_output(output_bytes)
 
             >> print(parsed_output)
-            b'Hello OpenDevin!'
+            b'Hello artificialEngineer!'
 
             >> print(remaining_bytes)
             b''
@@ -107,7 +107,7 @@ class DockerProcess(Process):
         string, ensuring that no partial messages are lost during reading.
         
         Dummy Example:
-            >> cmd = 'echo "Hello OpenDevin!"'
+            >> cmd = 'echo "Hello artificialEngineer!"'
             >> result = subprocess.Popen(
                 cmd, shell=True, stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT, text=True, cwd='.'
@@ -116,7 +116,7 @@ class DockerProcess(Process):
 
             >> logs = bg_cmd.read_logs()
             >> print(logs)
-            Hello OpenDevin!
+            Hello artificialEngineer!
 
         Returns:
             str: The decoded logs(string) of the command.

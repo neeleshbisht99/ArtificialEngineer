@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 from typing import Dict
 from typing import Tuple
 
-from opendevin.sandbox.process import Process
-from opendevin.sandbox.plugins.mixin import PluginMixin
+from artificialEngineer.sandbox.process import Process
+from artificialEngineer.sandbox.plugins.mixin import PluginMixin
 
 
 class Sandbox(ABC, PluginMixin):

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, asdict
 from typing import TYPE_CHECKING
-from opendevin.schema import ActionType
+from artificialEngineer.schema import ActionType
 
 if TYPE_CHECKING:
-    from opendevin.controller import AgentController
-    from opendevin.observation import Observation
+    from artificialEngineer.controller import AgentController
+    from artificialEngineer.observation import Observation
 
 @dataclass
 class Action:

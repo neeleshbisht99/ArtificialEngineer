@@ -2,11 +2,11 @@ from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from .base import ExecutableAction
-from opendevin.schema import ActionType
+from artificialEngineer.schema import ActionType
 
 if TYPE_CHECKING:
-    from opendevin.controller import AgentController
-    from opendevin.observation import CmdOutputObservation
+    from artificialEngineer.controller import AgentController
+    from artificialEngineer.observation import CmdOutputObservation
 
 
 @dataclass

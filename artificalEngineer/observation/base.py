@@ -1,6 +1,6 @@
 import copy
 from dataclasses import dataclass
-from opendevin.schema import ObservationType
+from artificialEngineer.schema import ObservationType
 
 
 @dataclass

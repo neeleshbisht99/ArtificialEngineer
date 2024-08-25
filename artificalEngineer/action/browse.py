@@ -1,15 +1,15 @@
 import os
 import base64
 from dataclasses import dataclass
-from opendevin.observation import BrowserOutputObservation
-from opendevin.schema import ActionType
+from artificialEngineer.observation import BrowserOutputObservation
+from artificialEngineer.schema import ActionType
 from typing import TYPE_CHECKING
 from playwright.async_api import async_playwright
 
 from .base import ExecutableAction
 
 if TYPE_CHECKING:
-    from opendevin.controller import AgentController
+    from artificialEngineer.controller import AgentController
 
 
 @dataclass

@@ -1,11 +1,11 @@
 # Notes for Windows and WSL Users
-OpenDevin only supports Windows via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+artificialEngineer only supports Windows via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 Please be sure to run all commands inside your WSL terminal.
 
 ## Troubleshooting
 
-### Failed to create opendevin user
-If you encounter the following error during setup: `Exception: Failed to create opendevin user in sandbox: b'useradd: UID 0 is not unique\n'`
+### Failed to create artificialEngineer user
+If you encounter the following error during setup: `Exception: Failed to create artificialEngineer user in sandbox: b'useradd: UID 0 is not unique\n'`
 You can resolve it by running:
     ```
     export SANDBOX_USER_ID=1000

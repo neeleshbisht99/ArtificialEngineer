@@ -4,9 +4,9 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ra
 from litellm.exceptions import APIConnectionError, RateLimitError, ServiceUnavailableError
 from functools import partial
 
-from opendevin import config
-from opendevin.logger import llm_prompt_logger, llm_response_logger
-from opendevin.logger import opendevin_logger as logger
+from artificialEngineer import config
+from artificialEngineer.logger import llm_prompt_logger, llm_response_logger
+from artificialEngineer.logger import artificialEngineer_logger as logger
 
 
 DEFAULT_API_KEY = config.get('LLM_API_KEY')

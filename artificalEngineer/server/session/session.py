@@ -3,7 +3,7 @@ from typing import Dict, Callable
 
 from fastapi import WebSocket, WebSocketDisconnect
 
-from opendevin.logger import opendevin_logger as logger
+from artificialEngineer.logger import artificialEngineer_logger as logger
 from .msg_stack import message_stack
 
 

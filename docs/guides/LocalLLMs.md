@@ -24,9 +24,9 @@ mistral:7b-instruct-v0.2-q4_K_M eb14864c7427    4.4 GB  2 weeks ago
 starcoder2:latest               f67ae0f64584    1.7 GB  19 hours ago
 ```
 
-## 2. Start OpenDevin
+## 2. Start artificialEngineer
 
-Use the instructions in [README.md](/README.md) to start OpenDevin using Docker.
+Use the instructions in [README.md](/README.md) to start artificialEngineer using Docker.
 But when running `docker run`, you'll need to add a few more arguments:
 
 ```bash
@@ -38,7 +38,7 @@ But when running `docker run`, you'll need to add a few more arguments:
 For example:
 
 ```bash
-# The directory you want OpenDevin to modify. MUST be an absolute path!
+# The directory you want artificialEngineer to modify. MUST be an absolute path!
 export WORKSPACE_BASE=$(pwd)/workspace
 
 docker run \
@@ -49,14 +49,14 @@ docker run \
     -v $WORKSPACE_BASE:/opt/workspace_base \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -p 3000:3000 \
-    ghcr.io/opendevin/opendevin:main
+    ghcr.io/artificialEngineer/artificialEngineer:main
 ```
 
 You should now be able to connect to `http://localhost:3000/`
 
 ## 3. Select your Model
 
-In the OpenDevin UI, click on the Settings wheel in the bottom-left corner.
+In the artificialEngineer UI, click on the Settings wheel in the bottom-left corner.
 Then in the `Model` input, enter `ollama/codellama:7b`, or the name of the model you pulled earlier.
 If it doesn’t show up in a dropdown, that’s fine, just type it in. Click Save when you’re done.
 
@@ -64,7 +64,7 @@ And now you're ready to go!
 
 ## 4. Configuring the ollama service (WSL)
 
-The default configuration for ollama in wsl only serves localhost. This means you can't reach it from a docker container. eg. it wont work with OpenDevin. First let's test that ollama is running correctly.
+The default configuration for ollama in wsl only serves localhost. This means you can't reach it from a docker container. eg. it wont work with artificialEngineer. First let's test that ollama is running correctly.
 
 ```bash
 ollama list # get list of installed models

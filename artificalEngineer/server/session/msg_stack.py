@@ -4,8 +4,8 @@ import atexit
 import uuid
 from typing import Dict, List
 
-from opendevin.schema.action import ActionType
-from opendevin.logger import opendevin_logger as logger
+from artificialEngineer.schema.action import ActionType
+from artificialEngineer.logger import artificialEngineer_logger as logger
 
 CACHE_DIR = os.getenv('CACHE_DIR', 'cache')
 MSG_CACHE_FILE = os.path.join(CACHE_DIR, 'messages.json')

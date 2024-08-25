@@ -8,7 +8,7 @@ export type Message = {
 const initialMessages: Message[] = [
   {
     content:
-      "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
+      "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
     sender: "assistant",
   },
 ];

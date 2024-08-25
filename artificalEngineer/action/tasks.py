@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 
 from .base import ExecutableAction, NotExecutableAction
-from opendevin.schema import ActionType
-from opendevin.observation import NullObservation
+from artificialEngineer.schema import ActionType
+from artificialEngineer.observation import NullObservation
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from opendevin.controller import AgentController
+    from artificialEngineer.controller import AgentController
 
 
 @dataclass

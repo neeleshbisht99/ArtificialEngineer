@@ -1,102 +1,102 @@
-@startuml opendevin
+@startuml artificialEngineer
 !pragma useIntermediatePackages false
 
-class opendevin.action.agent.AgentEchoAction {
+class artificialEngineer.action.agent.AgentEchoAction {
   content: str
   runnable: bool
   action: str
 }
-class opendevin.action.agent.AgentFinishAction {
+class artificialEngineer.action.agent.AgentFinishAction {
   runnable: bool
   action: str
 }
-class opendevin.observation.AgentMessageObservation {
+class artificialEngineer.observation.AgentMessageObservation {
   role: str
   observation: str
 }
-class opendevin.action.agent.AgentRecallAction {
+class artificialEngineer.action.agent.AgentRecallAction {
   query: str
   action: str
 }
-class opendevin.observation.AgentRecallObservation {
+class artificialEngineer.observation.AgentRecallObservation {
   memories: List[str]
   role: str
   observation: str
 }
-class opendevin.action.agent.AgentSummarizeAction {
+class artificialEngineer.action.agent.AgentSummarizeAction {
   summary: str
   action: str
 }
-class opendevin.action.agent.AgentThinkAction {
+class artificialEngineer.action.agent.AgentThinkAction {
   thought: str
   runnable: bool
   action: str
 }
-class opendevin.action.base.ExecutableAction {
+class artificialEngineer.action.base.ExecutableAction {
 }
-class opendevin.action.base.NotExecutableAction {
+class artificialEngineer.action.base.NotExecutableAction {
 }
-class opendevin.observation.Observation {
+class artificialEngineer.observation.Observation {
   content: str
 }
-class opendevin.action.base.Action {
+class artificialEngineer.action.base.Action {
 }
-class opendevin.action.base.NullAction {
+class artificialEngineer.action.base.NullAction {
   action: str
 }
-class opendevin.action.bash.CmdKillAction {
+class artificialEngineer.action.bash.CmdKillAction {
   id: int
   action: str
 }
-class opendevin.action.bash.CmdRunAction {
+class artificialEngineer.action.bash.CmdRunAction {
   command: str
   background: bool
   action: str
 }
-class opendevin.action.browse.BrowseURLAction {
+class artificialEngineer.action.browse.BrowseURLAction {
   url: str
   action: str
 }
-class opendevin.observation.BrowserOutputObservation {
+class artificialEngineer.observation.BrowserOutputObservation {
   url: str
   status_code: int
   error: bool
   observation: str
 }
-class opendevin.action.fileop.FileReadAction {
+class artificialEngineer.action.fileop.FileReadAction {
   path: str
   action: str
 }
-class opendevin.observation.FileReadObservation {
+class artificialEngineer.observation.FileReadObservation {
   path: str
   observation: str
 }
-class opendevin.action.fileop.FileWriteAction {
+class artificialEngineer.action.fileop.FileWriteAction {
   path: str
   contents: str
   action: str
 }
-class opendevin.observation.FileWriteObservation {
+class artificialEngineer.observation.FileWriteObservation {
   path: str
   observation: str
 }
-class opendevin.action.tasks.AddTaskAction {
+class artificialEngineer.action.tasks.AddTaskAction {
   parent: str
   goal: str
   subtasks: list
   action: str
 }
-class opendevin.action.tasks.ModifyTaskAction {
+class artificialEngineer.action.tasks.ModifyTaskAction {
   id: str
   state: str
   action: str
 }
-abstract class opendevin.agent.Agent {
+abstract class artificialEngineer.agent.Agent {
   _registry: Dict[str, Type[Agent]] {static}
   llm: LLM
   _complete: None
 }
-class opendevin.llm.llm.LLM {
+class artificialEngineer.llm.llm.LLM {
   model: None
   api_key: None
   base_url: None
@@ -105,7 +105,7 @@ class opendevin.llm.llm.LLM {
   _debug_id: None
   _completion: None
 }
-class opendevin.controller.agent_controller.AgentController {
+class artificialEngineer.controller.agent_controller.AgentController {
   agent: Agent
   max_iterations: int
   workdir: str
@@ -114,36 +114,36 @@ class opendevin.controller.agent_controller.AgentController {
   plan: Plan
   callbacks: List[Callable]
 }
-class opendevin.observation.AgentErrorObservation {
+class artificialEngineer.observation.AgentErrorObservation {
   observation: str
 }
-class opendevin.controller.command_manager.CommandManager {
+class artificialEngineer.controller.command_manager.CommandManager {
   directory: None
   shell: None
 }
-class opendevin.observation.NullObservation {
+class artificialEngineer.observation.NullObservation {
   observation: str
 }
-class opendevin.plan.Plan {
+class artificialEngineer.plan.Plan {
   main_goal: str {static}
   task: Task {static}
   main_goal: str
   task: None
 }
-class opendevin.state.State {
+class artificialEngineer.state.State {
   plan: Plan
   iteration: int
   background_commands_obs: List[CmdOutputObservation]
   history: List[Tuple[Action, Observation]]
   updated_info: List[Tuple[Action, Observation]]
 }
-class opendevin.observation.CmdOutputObservation {
+class artificialEngineer.observation.CmdOutputObservation {
   command_id: int
   command: str
   exit_code: int
   observation: str
 }
-class opendevin.sandbox.sandbox.DockerInteractive {
+class artificialEngineer.sandbox.sandbox.DockerInteractive {
   background_commands: Dict[int, BackgroundCommand] {static}
   instance_id: None
   instance_id: None
@@ -154,11 +154,11 @@ class opendevin.sandbox.sandbox.DockerInteractive {
   container_image: None
   container_name: None
 }
-class opendevin.observation.UserMessageObservation {
+class artificialEngineer.observation.UserMessageObservation {
   role: str
   observation: str
 }
-class opendevin.plan.Task {
+class artificialEngineer.plan.Task {
   id: str {static}
   goal: str {static}
   parent: Task | None {static}
@@ -170,53 +170,53 @@ class opendevin.plan.Task {
   subtasks: None
 }
 
-class opendevin.server.session.Session {
+class artificialEngineer.server.session.Session {
   websocket: None
   controller: Optional[AgentController]
   agent: Optional[Agent]
   agent_task: None
 }
 
-opendevin.action.base.ExecutableAction <|-- opendevin.action.agent.AgentEchoAction
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.agent.AgentFinishAction
-opendevin.observation.Observation <|-- opendevin.observation.AgentMessageObservation
-opendevin.action.base.ExecutableAction <|-- opendevin.action.agent.AgentRecallAction
-opendevin.observation.Observation <|-- opendevin.observation.AgentRecallObservation
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.agent.AgentSummarizeAction
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.agent.AgentThinkAction
-opendevin.action.base.Action <|-- opendevin.action.base.ExecutableAction
-opendevin.action.base.Action <|-- opendevin.action.base.NotExecutableAction
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.base.NullAction
-opendevin.action.base.ExecutableAction <|-- opendevin.action.bash.CmdKillAction
-opendevin.action.base.ExecutableAction <|-- opendevin.action.bash.CmdRunAction
-opendevin.action.base.ExecutableAction <|-- opendevin.action.browse.BrowseURLAction
-opendevin.observation.Observation <|-- opendevin.observation.BrowserOutputObservation
-opendevin.action.base.ExecutableAction <|-- opendevin.action.fileop.FileReadAction
-opendevin.observation.Observation <|-- opendevin.observation.FileReadObservation
-opendevin.action.base.ExecutableAction <|-- opendevin.action.fileop.FileWriteAction
-opendevin.observation.Observation <|-- opendevin.observation.FileWriteObservation
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.tasks.AddTaskAction
-opendevin.action.base.NotExecutableAction <|-- opendevin.action.tasks.ModifyTaskAction
-opendevin.agent.Agent *-- opendevin.agent.Agent
-opendevin.agent.Agent *-- opendevin.llm.llm.LLM
-opendevin.controller.agent_controller.AgentController *-- opendevin.agent.Agent
-opendevin.observation.Observation <|-- opendevin.observation.AgentErrorObservation
-opendevin.observation.Observation <|-- opendevin.observation.NullObservation
-opendevin.plan.Plan *-- opendevin.plan.Task
-opendevin.state.State *-- opendevin.plan.Plan
-opendevin.state.State *-- opendevin.observation.CmdOutputObservation
-opendevin.state.State *-- opendevin.action.base.Action
-opendevin.state.State *-- opendevin.observation.Observation
-opendevin.observation.Observation <|-- opendevin.observation.CmdOutputObservation
-opendevin.sandbox.sandbox.DockerInteractive *-- opendevin.sandbox.sandbox.BackgroundCommand
-opendevin.observation.Observation <|-- opendevin.observation.UserMessageObservation
-opendevin.plan.Task *-- opendevin.plan.Task
-opendevin.server.session.Session *-- opendevin.controller.agent_controller.AgentController
-opendevin.server.session.Session *-- opendevin.agent.Agent
-opendevin.controller.agent_controller.AgentController -> opendevin.state.State
-opendevin.controller.agent_controller.AgentController -> opendevin.plan.Plan
-opendevin.controller.agent_controller.AgentController -> opendevin.controller.command_manager.CommandManager
-opendevin.controller.command_manager.CommandManager -> opendevin.sandbox.sandbox.DockerInteractive
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.agent.AgentEchoAction
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.agent.AgentFinishAction
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.AgentMessageObservation
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.agent.AgentRecallAction
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.AgentRecallObservation
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.agent.AgentSummarizeAction
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.agent.AgentThinkAction
+artificialEngineer.action.base.Action <|-- artificialEngineer.action.base.ExecutableAction
+artificialEngineer.action.base.Action <|-- artificialEngineer.action.base.NotExecutableAction
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.base.NullAction
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.bash.CmdKillAction
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.bash.CmdRunAction
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.browse.BrowseURLAction
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.BrowserOutputObservation
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.fileop.FileReadAction
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.FileReadObservation
+artificialEngineer.action.base.ExecutableAction <|-- artificialEngineer.action.fileop.FileWriteAction
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.FileWriteObservation
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.tasks.AddTaskAction
+artificialEngineer.action.base.NotExecutableAction <|-- artificialEngineer.action.tasks.ModifyTaskAction
+artificialEngineer.agent.Agent *-- artificialEngineer.agent.Agent
+artificialEngineer.agent.Agent *-- artificialEngineer.llm.llm.LLM
+artificialEngineer.controller.agent_controller.AgentController *-- artificialEngineer.agent.Agent
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.AgentErrorObservation
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.NullObservation
+artificialEngineer.plan.Plan *-- artificialEngineer.plan.Task
+artificialEngineer.state.State *-- artificialEngineer.plan.Plan
+artificialEngineer.state.State *-- artificialEngineer.observation.CmdOutputObservation
+artificialEngineer.state.State *-- artificialEngineer.action.base.Action
+artificialEngineer.state.State *-- artificialEngineer.observation.Observation
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.CmdOutputObservation
+artificialEngineer.sandbox.sandbox.DockerInteractive *-- artificialEngineer.sandbox.sandbox.BackgroundCommand
+artificialEngineer.observation.Observation <|-- artificialEngineer.observation.UserMessageObservation
+artificialEngineer.plan.Task *-- artificialEngineer.plan.Task
+artificialEngineer.server.session.Session *-- artificialEngineer.controller.agent_controller.AgentController
+artificialEngineer.server.session.Session *-- artificialEngineer.agent.Agent
+artificialEngineer.controller.agent_controller.AgentController -> artificialEngineer.state.State
+artificialEngineer.controller.agent_controller.AgentController -> artificialEngineer.plan.Plan
+artificialEngineer.controller.agent_controller.AgentController -> artificialEngineer.controller.command_manager.CommandManager
+artificialEngineer.controller.command_manager.CommandManager -> artificialEngineer.sandbox.sandbox.DockerInteractive
 
 footer Based on f3fda42; Generated by //py2puml//
 @enduml

@@ -1,7 +1,7 @@
 from typing import List
 
-from opendevin.logger import opendevin_logger as logger
-from opendevin.exceptions import PlanInvalidStateError
+from artificialEngineer.logger import artificialEngineer_logger as logger
+from artificialEngineer.exceptions import PlanInvalidStateError
 
 OPEN_STATE = 'open'
 COMPLETED_STATE = 'completed'

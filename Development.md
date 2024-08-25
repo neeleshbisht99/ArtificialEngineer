@@ -1,5 +1,5 @@
 # Development Guide
-This guide is for people working on OpenDevin and editing the source code.
+This guide is for people working on artificialEngineer and editing the source code.
 
 ## Start the server for development
 
@@ -14,26 +14,26 @@ Make sure you have all these dependencies installed before moving on to `make bu
 
 ### 2. Build and Setup The Environment
 
-- **Build the Project:** Begin by building the project, which includes setting up the environment and installing dependencies. This step ensures that OpenDevin is ready to run smoothly on your system.
+- **Build the Project:** Begin by building the project, which includes setting up the environment and installing dependencies. This step ensures that artificialEngineer is ready to run smoothly on your system.
     ```bash
     make build
     ```
 
 ### 3. Configuring the Language Model
 
-OpenDevin supports a diverse array of Language Models (LMs) through the powerful [litellm](https://docs.litellm.ai) library. By default, we've chosen the mighty GPT-4 from OpenAI as our go-to model, but the world is your oyster! You can unleash the potential of Anthropic's suave Claude, the enigmatic Llama, or any other LM that piques your interest.
+artificialEngineer supports a diverse array of Language Models (LMs) through the powerful [litellm](https://docs.litellm.ai) library. By default, we've chosen the mighty GPT-4 from OpenAI as our go-to model, but the world is your oyster! You can unleash the potential of Anthropic's suave Claude, the enigmatic Llama, or any other LM that piques your interest.
 
 To configure the LM of your choice, follow these steps:
 
 1. **Using the Makefile: The Effortless Approach**
-   With a single command, you can have a smooth LM setup for your OpenDevin experience. Simply run:
+   With a single command, you can have a smooth LM setup for your artificialEngineer experience. Simply run:
    ```bash
    make setup-config
    ```
-   This command will prompt you to enter the LLM API key, model name, and other variables ensuring that OpenDevin is tailored to your specific needs. Note that the model name will apply only when you run headless. If you use the UI, please set the model in the UI.
+   This command will prompt you to enter the LLM API key, model name, and other variables ensuring that artificialEngineer is tailored to your specific needs. Note that the model name will apply only when you run headless. If you use the UI, please set the model in the UI.
 
 **Note on Alternative Models:**
-Some alternative models may prove more challenging to tame than others. Fear not, brave adventurer! We shall soon unveil LLM-specific documentation to guide you on your quest. And if you've already mastered the art of wielding a model other than OpenAI's GPT, we encourage you to [share your setup instructions with us](https://github.com/OpenDevin/OpenDevin/issues/417).
+Some alternative models may prove more challenging to tame than others. Fear not, brave adventurer! We shall soon unveil LLM-specific documentation to guide you on your quest. And if you've already mastered the art of wielding a model other than OpenAI's GPT, we encourage you to [share your setup instructions with us](https://github.com/artificialEngineer/artificialEngineer/issues/417).
 
 For a full list of the LM providers and models available, please consult the [litellm documentation](https://docs.litellm.ai/docs/providers).
 
@@ -41,7 +41,7 @@ There is also [documentation for running with local models using ollama](./docs/
 
 ### 4. Run the Application
 
-- **Run the Application:** Once the setup is complete, launching OpenDevin is as simple as running a single command. This command starts both the backend and frontend servers seamlessly, allowing you to interact with OpenDevin without any hassle.
+- **Run the Application:** Once the setup is complete, launching artificialEngineer is as simple as running a single command. This command starts both the backend and frontend servers seamlessly, allowing you to interact with artificialEngineer without any hassle.
     ```bash
     make run
     ```
@@ -60,11 +60,11 @@ There is also [documentation for running with local models using ollama](./docs/
 
 ### 6. LLM Debugging
 
-If you encounter any issues with the Language Model (LM) or you're simply curious, you can inspect the actual LLM prompts and responses. To do so, export DEBUG=1 in the environment and restart the backend. OpenDevin will then log the prompts and responses in the logs/llm/CURRENT_DATE directory, allowing you to identify the causes.
+If you encounter any issues with the Language Model (LM) or you're simply curious, you can inspect the actual LLM prompts and responses. To do so, export DEBUG=1 in the environment and restart the backend. artificialEngineer will then log the prompts and responses in the logs/llm/CURRENT_DATE directory, allowing you to identify the causes.
 
 ### 7. Help
 
-- **Get Some Help:** Need assistance or information on available targets and commands? The help command provides all the necessary guidance to ensure a smooth experience with OpenDevin.
+- **Get Some Help:** Need assistance or information on available targets and commands? The help command provides all the necessary guidance to ensure a smooth experience with artificialEngineer.
     ```bash
     make help
     ```

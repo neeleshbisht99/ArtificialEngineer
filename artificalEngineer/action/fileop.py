@@ -2,14 +2,14 @@ import os
 
 from dataclasses import dataclass
 
-from opendevin.observation import (
+from artificialEngineer.observation import (
     FileReadObservation,
     FileWriteObservation
 )
 
-from opendevin.schema import ActionType
-from opendevin.sandbox import E2BBox
-from opendevin import config
+from artificialEngineer.schema import ActionType
+from artificialEngineer.sandbox import E2BBox
+from artificialEngineer import config
 
 from .base import ExecutableAction
 

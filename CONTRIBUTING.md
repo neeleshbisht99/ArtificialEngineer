@@ -1,16 +1,16 @@
 # Contributing
 
-Thanks for your interest in contributing to OpenDevin! We welcome and appreciate contributions.
-To report bugs, create a [GitHub issue](https://github.com/OpenDevin/OpenDevin/issues/new/choose).
+Thanks for your interest in contributing to artificialEngineer! We welcome and appreciate contributions.
+To report bugs, create a [GitHub issue](https://github.com/artificialEngineer/artificialEngineer/issues/new/choose).
 
 ## Contribution Guide
 ### 1. Fork the Official Repository
 
-Fork [OpenDevin repository](https://github.com/OpenDevin/OpenDevin) into your own account.
+Fork [artificialEngineer repository](https://github.com/artificialEngineer/artificialEngineer) into your own account.
 Clone your own forked repository into your local environment.
 
 ```shell
-git clone git@github.com:<YOUR-USERNAME>/OpenDevin.git
+git clone git@github.com:<YOUR-USERNAME>/artificialEngineer.git
 ```
 
 ### 2. Configure Git
@@ -19,8 +19,8 @@ Set the official repository as your [upstream](https://www.atlassian.com/git/tut
 Add the original repository as upstream
 
 ```shell
-cd OpenDevin
-git remote add upstream git@github.com:OpenDevin/OpenDevin.git
+cd artificialEngineer
+git remote add upstream git@github.com:artificialEngineer/artificialEngineer.git
 ```
 
 Verify that the remote is set.
@@ -40,9 +40,9 @@ git push origin main
 ```
 
 ### 4. Create a New Branch And Open a Pull Request
-After you finish implementation, open forked repository. The source branch is your new branch, and the target branch is `OpenDevin/OpenDevin` `main` branch. Then PR should appears in [OpenDevin PRs](https://github.com/OpenDevin/OpenDevin/pulls).
+After you finish implementation, open forked repository. The source branch is your new branch, and the target branch is `artificialEngineer/artificialEngineer` `main` branch. Then PR should appears in [artificialEngineer PRs](https://github.com/artificialEngineer/artificialEngineer/pulls).
 
-Then OpenDevin team will review your code.
+Then artificialEngineer team will review your code.
 
 ## PR Rules
 
@@ -65,9 +65,9 @@ For example, a PR title could be:
 - `refactor: modify package path`
 - `feat(frontend): xxxx`, where `(frontend)` means that this PR mainly focuses on the frontend component.
 
-You may also check out previous PRs in the [PR list](https://github.com/OpenDevin/OpenDevin/pulls).
+You may also check out previous PRs in the [PR list](https://github.com/artificialEngineer/artificialEngineer/pulls).
 
-As described in [here](https://github.com/OpenDevin/OpenDevin/labels), we create several labels. Every PR should be tagged with the corresponding labels.
+As described in [here](https://github.com/artificialEngineer/artificialEngineer/labels), we create several labels. Every PR should be tagged with the corresponding labels.
 
 ### 2. Pull Request description
 
@@ -80,9 +80,9 @@ Please refer to the README in each module:
 - [frontend](./frontend/README.md)
 - [agenthub](./agenthub/README.md)
 - [evaluation](./evaluation/README.md)
-- [opendevin](./opendevin/README.md)
-    - [server](./opendevin/server/README.md)
-    - [mock server](./opendevin/mock/README.md)
+- [artificialEngineer](./artificialEngineer/README.md)
+    - [server](./artificialEngineer/server/README.md)
+    - [mock server](./artificialEngineer/mock/README.md)
 
 ## Tests
 TODO: make sure code pass the test before submit.

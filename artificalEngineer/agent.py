@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Dict, Type, TYPE_CHECKING
 
-from opendevin.exceptions import AgentAlreadyRegisteredError, AgentNotRegisteredError
+from artificialEngineer.exceptions import AgentAlreadyRegisteredError, AgentNotRegisteredError
 
 
 class Agent(ABC):

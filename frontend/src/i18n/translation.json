@@ -1,16 +1,16 @@
 {
   "WORKSPACE$TITLE": {
-    "en": "OpenDevin Workspace",
-    "zh-CN": "OpenDevin 工作区",
-    "de": "OpenDevin Arbeitsbereich",
-    "ko-KR": "OpenDevin 워크스페이스",
-    "no": "OpenDevin Arbeidsområde",
-    "zh-TW": "OpenDevin 工作區",
+    "en": "artificialEngineer Workspace",
+    "zh-CN": "artificialEngineer 工作区",
+    "de": "artificialEngineer Arbeitsbereich",
+    "ko-KR": "artificialEngineer 워크스페이스",
+    "no": "artificialEngineer Arbeidsområde",
+    "zh-TW": "artificialEngineer 工作區",
     "ar": "مساحة عمل أوبنديفين",
-    "fr": "OpenDevin Espace de travail",
-    "it": "Area di lavoro OpenDevin",
-    "pt": "Espaço de trabalho OpenDevin",
-    "es": "Espacio de trabajo de OpenDevin"
+    "fr": "artificialEngineer Espace de travail",
+    "it": "Area di lavoro artificialEngineer",
+    "pt": "Espaço de trabalho artificialEngineer",
+    "es": "Espacio de trabajo de artificialEngineer"
   },
   "WORKSPACE$TERMINAL_TAB_LABEL": {
     "en": "Terminal",
@@ -66,21 +66,21 @@
     "fr": "Navigateur",
     "tr": "Tarayıcı"
   },
-  "CONFIGURATION$OPENDEVIN_WORKSPACE_DIRECTORY_INPUT_LABEL": {
-    "en": "OpenDevin Workspace directory",
-    "zh-CN": "OpenDevin 工作区目录",
-    "de": "OpenDevin Arbeitsbereichsverzeichnis",
-    "ko-KR": "OpenDevin 워크스페이스 폴더",
-    "no": "OpenDevin arbeidsmappe",
-    "zh-TW": "OpenDevin 工作區目錄",
-    "it": "Directory dell'area di lavoro OpenDevin",
-    "pt": "Diretório do espaço de trabalho OpenDevin",
-    "es": "Directorio del espacio de trabajo de OpenDevin",
+  "CONFIGURATION$artificialEngineer_WORKSPACE_DIRECTORY_INPUT_LABEL": {
+    "en": "artificialEngineer Workspace directory",
+    "zh-CN": "artificialEngineer 工作区目录",
+    "de": "artificialEngineer Arbeitsbereichsverzeichnis",
+    "ko-KR": "artificialEngineer 워크스페이스 폴더",
+    "no": "artificialEngineer arbeidsmappe",
+    "zh-TW": "artificialEngineer 工作區目錄",
+    "it": "Directory dell'area di lavoro artificialEngineer",
+    "pt": "Diretório do espaço de trabalho artificialEngineer",
+    "es": "Directorio del espacio de trabajo de artificialEngineer",
     "ar": "مجلد مساحة عمل أوبنديفين",
-    "fr": "Répertoire de l'espace de travail OpenDevin",
-    "tr": "OpenDevin çalışma alanı dizini"
+    "fr": "Répertoire de l'espace de travail artificialEngineer",
+    "tr": "artificialEngineer çalışma alanı dizini"
   },
-  "CONFIGURATION$OPENDEVIN_WORKSPACE_DIRECTORY_INPUT_PLACEHOLDER": {
+  "CONFIGURATION$artificialEngineer_WORKSPACE_DIRECTORY_INPUT_PLACEHOLDER": {
     "en": "Default: ./workspace",
     "zh-CN": "默认：./workspace",
     "de": "Standard: ./workspace",
@@ -283,17 +283,17 @@
     "fr": "Envoyer"
   },
   "CHAT_INTERFACE$INITIAL_MESSAGE": {
-    "en": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "zh-CN": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "de": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "ko-KR": "안녕하세요! 저는 오픈데빈(OpenDevin), AI 소프트웨어 엔지니어입니다. 오늘은 저와 함께 무엇을 만들어 볼까요?",
-    "no": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "zh-TW": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "it": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "pt": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "es": "Hi! I'm OpenDevin, an AI Software Engineer. What would you like to build with me today?",
-    "ar": "مرحبا! أنا OpenDevin، مهندس برمجيات AI. ماذا تود أن تبني معي اليوم؟",
-    "fr": "Salut! Je suis OpenDevin, un ingénieur logiciel en IA. Que voudriez-vous construire avec moi aujourd'hui?"
+    "en": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "zh-CN": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "de": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "ko-KR": "안녕하세요! 저는 오픈데빈(artificialEngineer), AI 소프트웨어 엔지니어입니다. 오늘은 저와 함께 무엇을 만들어 볼까요?",
+    "no": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "zh-TW": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "it": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "pt": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "es": "Hi! I'm artificialEngineer, an AI Software Engineer. What would you like to build with me today?",
+    "ar": "مرحبا! أنا artificialEngineer، مهندس برمجيات AI. ماذا تود أن تبني معي اليوم؟",
+    "fr": "Salut! Je suis artificialEngineer, un ingénieur logiciel en IA. Que voudriez-vous construire avec moi aujourd'hui?"
   },
   "CHAT_INTERFACE$ASSISTANT": {
     "en": "Assistant",

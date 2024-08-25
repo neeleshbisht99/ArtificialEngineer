@@ -3,7 +3,7 @@ import os
 import sys
 import traceback
 from datetime import datetime
-from opendevin import config
+from artificialEngineer import config
 from typing import Literal, Mapping
 from termcolor import colored
 
@@ -92,7 +92,7 @@ def get_file_handler():
     log_dir = os.path.join(os.getcwd(), 'logs')
     os.makedirs(log_dir, exist_ok=True)
     timestamp = datetime.now().strftime('%y-%m-%d')
-    file_name = f'opendevin_{timestamp}.log'
+    file_name = f'artificialEngineer_{timestamp}.log'
     file_handler = logging.FileHandler(os.path.join(log_dir, file_name))
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(file_formatter)
@@ -119,14 +119,14 @@ def log_uncaught_exceptions(ex_cls, ex, tb):
 
 sys.excepthook = log_uncaught_exceptions
 
-opendevin_logger = logging.getLogger('opendevin')
-opendevin_logger.setLevel(logging.INFO)
-opendevin_logger.addHandler(get_file_handler)
-opendevin_logger.addHandler(get_console_handler)
-opendevin_logger.propagate = False
-opendevin_logger.debug('Logging initialized')
-opendevin_logger.debug('Logging to %s', os.path.join(
-    os.getcwd(), 'logs', 'opendevin.log' ))
+artificialEngineer_logger = logging.getLogger('artificialEngineer')
+artificialEngineer_logger.setLevel(logging.INFO)
+artificialEngineer_logger.addHandler(get_file_handler)
+artificialEngineer_logger.addHandler(get_console_handler)
+artificialEngineer_logger.propagate = False
+artificialEngineer_logger.debug('Logging initialized')
+artificialEngineer_logger.debug('Logging to %s', os.path.join(
+    os.getcwd(), 'logs', 'artificialEngineer.log' ))
 
 # Exclude LiteLLM from logging output
 logging.getLogger('LiteLLM').disabled = True
@@ -171,7 +171,7 @@ class LlmFileHandler(logging.FileHandler):
         self.stream = self._open()
         super().emit(record)
         self.stream.close
-        opendevin_logger.debug('Logging to %s', self.baseFilename)
+        artificialEngineer_logger.debug('Logging to %s', self.baseFilename)
         self.message_counter+=1
 
 

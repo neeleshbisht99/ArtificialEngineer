@@ -8,7 +8,7 @@ To start the app, run these commands, replacing `$(pwd)/workspace` with the path
 # Your OpenAI API key, or any other LLM API key
 export LLM_API_KEY="sk-..."
 
-# The directory you want OpenDevin to modify. MUST be an absolute path!
+# The directory you want artificialEngineer to modify. MUST be an absolute path!
 export WORKSPACE_BASE=$(pwd)/workspace
 
 docker run \
@@ -18,5 +18,5 @@ docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -p 3000:3000 \
     --add-host host.docker.internal=host-gateway \
-    ghcr.io/opendevin/opendevin:0.3.1
+    ghcr.io/artificialEngineer/artificialEngineer:0.3.1
 ```

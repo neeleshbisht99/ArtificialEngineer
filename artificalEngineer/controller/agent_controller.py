@@ -5,22 +5,22 @@ from typing import Callable, List
 from openai import AuthenticationError, APIConnectionError
 from litellm import ContextWindowExceededError
 
-from opendevin import config
-from opendevin.action import (
+from artificialEngineer import config
+from artificialEngineer.action import (
     Action,
     AgentFinishAction,
     NullAction,
 )
-from opendevin.agent import Agent
-from opendevin.exceptions import AgentNoActionError, MaxCharsExceedError
-from opendevin.logger import opendevin_logger as logger
-from opendevin.observation import AgentErrorObservation, NullObservation, Observation
-from opendevin.plan import Plan
-from opendevin.state import State
+from artificialEngineer.agent import Agent
+from artificialEngineer.exceptions import AgentNoActionError, MaxCharsExceedError
+from artificialEngineer.logger import artificialEngineer_logger as logger
+from artificialEngineer.observation import AgentErrorObservation, NullObservation, Observation
+from artificialEngineer.plan import Plan
+from artificialEngineer.state import State
 
-from opendevin.action.tasks import TaskStateChangedAction
-from opendevin.schema import TaskState
-from opendevin.controller.action_manager import ActionManager
+from artificialEngineer.action.tasks import TaskStateChangedAction
+from artificialEngineer.schema import TaskState
+from artificialEngineer.controller.action_manager import ActionManager
 
 MAX_ITERATIONS = config.get('MAX_ITERATIONS')
 MAX_CHARS = config.get('MAX_CHARS')

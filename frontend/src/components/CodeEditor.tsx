@@ -76,7 +76,7 @@ function CodeEditor(): JSX.Element {
                 ? "welcome.txt"
                 : selectedFileName.toLocaleLowerCase()
             }
-            defaultValue="# Welcome to OpenDevin!"
+            defaultValue="# Welcome to artificialEngineer!"
             value={code}
             onMount={handleEditorDidMount}
           />

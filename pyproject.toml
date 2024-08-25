@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "opendevin"
+name = "artificialEngineer"
 version = "0.1.0"
-description = "OpenDevin: Code Less, Make More"
-authors = ["OpenDevin"]
+description = "artificialEngineer: Code Less, Make More"
+authors = ["artificialEngineer"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/OpenDevin/OpenDevin"
+repository = "https://github.com/artificialEngineer/artificialEngineer"
 
 [tool.poetry.dependencies]
 python = "^3.11"

@@ -1,20 +1,20 @@
 from typing import List
 import traceback
 
-from opendevin import config
-from opendevin.observation import CmdOutputObservation
-from opendevin.sandbox import DockerExecBox, DockerSSHBox, Sandbox, LocalBox, E2BBox
-from opendevin.schema import ConfigType
-from opendevin.logger import opendevin_logger as logger
-from opendevin.action import (
+from artificialEngineer import config
+from artificialEngineer.observation import CmdOutputObservation
+from artificialEngineer.sandbox import DockerExecBox, DockerSSHBox, Sandbox, LocalBox, E2BBox
+from artificialEngineer.schema import ConfigType
+from artificialEngineer.logger import artificialEngineer_logger as logger
+from artificialEngineer.action import (
     Action,
 )
-from opendevin.observation import (
+from artificialEngineer.observation import (
     Observation,
     AgentErrorObservation,
     NullObservation,
 )
-from opendevin.sandbox.plugins import PluginRequirement
+from artificialEngineer.sandbox.plugins import PluginRequirement
 
 
 class ActionManager:

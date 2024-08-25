@@ -1,13 +1,13 @@
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
-from opendevin.observation.base import Observation
-from opendevin.observation.message import AgentMessageObservation
-from opendevin.observation.recall import AgentRecallObservation
-from opendevin.schema.action import ActionType
+from artificialEngineer.observation.base import Observation
+from artificialEngineer.observation.message import AgentMessageObservation
+from artificialEngineer.observation.recall import AgentRecallObservation
+from artificialEngineer.schema.action import ActionType
 from .base import ExecutableAction, NotExecutableAction
 if TYPE_CHECKING:
-    from opendevin.controller import AgentController
+    from artificialEngineer.controller import AgentController
 
 @dataclass
 class AgentRecallAction(ExecutableAction):

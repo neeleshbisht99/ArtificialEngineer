@@ -14,7 +14,7 @@ If you find more information or a workaround for one of these issues, please
 open a PR to add details to this file.
 
 ## Unable to connect to docker
-https://github.com/OpenDevin/OpenDevin/issues/1226
+https://github.com/artificialEngineer/artificialEngineer/issues/1226
 
 ### Symptoms
 ```
@@ -25,7 +25,7 @@ docker.errors.DockerException: Error while fetching server API version: ('Connec
 ```
 
 ### Details
-OpenDevin uses a docker container to do its work safely, without potentially breaking your machine.
+artificialEngineer uses a docker container to do its work safely, without potentially breaking your machine.
 
 ### Workarounds
 * Run `docker ps` to ensure that docker is running
@@ -33,7 +33,7 @@ OpenDevin uses a docker container to do its work safely, without potentially bre
 
 
 ## Unable to connect to SSH box
-https://github.com/OpenDevin/OpenDevin/issues/1156
+https://github.com/artificialEngineer/artificialEngineer/issues/1156
 
 ### Symptoms
 ```
@@ -43,17 +43,17 @@ pexpect.pxssh.ExceptionPxssh: Could not establish connection to host
 ```
 
 ### Details
-By default, OpenDevin connects to a running container using SSH. On some machines,
+By default, artificialEngineer connects to a running container using SSH. On some machines,
 especially Windows, this seems to fail.
 
 ### Workarounds
 * Restart your computer (sometimes works?)
 * Be sure to have the latest versions of WSL and Docker
-* Try [this reinstallation guide](https://github.com/OpenDevin/OpenDevin/issues/1156#issuecomment-2064549427)
+* Try [this reinstallation guide](https://github.com/artificialEngineer/artificialEngineer/issues/1156#issuecomment-2064549427)
 * Set `-e SANDBOX_TYPE=exec` to switch to the ExecBox docker container
 
 ## Unable to connect to LLM
-https://github.com/OpenDevin/OpenDevin/issues/1208
+https://github.com/artificialEngineer/artificialEngineer/issues/1208
 
 ### Symptoms
 ```
@@ -64,7 +64,7 @@ AttributeError: 'NoneType' object has no attribute 'request'
 ```
 
 ### Details
-This usually happens with local LLM setups, when OpenDevin can't connect to the LLM server.
+This usually happens with local LLM setups, when artificialEngineer can't connect to the LLM server.
 See our guide for [local LLMs](./LocalLLMs.md) for more information.
 
 ### Workarounds
