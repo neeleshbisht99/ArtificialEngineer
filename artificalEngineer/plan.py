@@ -130,8 +130,6 @@ class Plan:
 
     main_goal: str
     task : Task
-    context: str
-    timer: str
 
     def __init__(self, task:str):
         """ Initializes a new instance of the Plan class.
