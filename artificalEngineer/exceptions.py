@@ -56,3 +56,11 @@ class PlanInvalidStateError(Exception):
         else:
             message = 'Invalid state'
         super.__init__(message)
+
+class PlanInvalidTypeError(Exception):
+    def __init__(self, type=None):
+        if type is not None:
+            message = f'Invalid type {type}'
+        else:
+            message = 'Invalid type'
+        super.__init__(message)
