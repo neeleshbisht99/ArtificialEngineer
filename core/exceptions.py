@@ -69,6 +69,4 @@ class PlanInvalidSignError(Exception):
     def __init__(self, sign=None):
         if sign is not None:
             message = f'Invalid sign {sign}'
-        else:
-            message = 'Invalid sign'
         super.__init__(message)
